@@ -2,8 +2,8 @@ package com.project.lambda;
 
 import java.io.*;
 import java.time.*;
-import java.util.*;
 import java.time.format.DateTimeFormatter;
+import java.util.*;
 
 public class SummarizeWorker {
     // Class to hold summarized data
@@ -153,8 +153,8 @@ public class SummarizeWorker {
     }
 
     private LocalDate parseDate(String timestamp) {
-        // Assuming timestamp format is "DD/MM/YYYY HH:mm:ss"
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        // Assuming timestamp format is "MM/dd/yyyy hh:mm:ss a"
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy hh:mm:ss a");
         return LocalDateTime.parse(timestamp, formatter).toLocalDate();
     }
 }
