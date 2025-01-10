@@ -1,4 +1,4 @@
-package com.project.lambda;
+package com.project.ConsolidatorWorker;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
@@ -7,13 +7,14 @@ import software.amazon.awssdk.services.s3.S3Client;
 import software.amazon.awssdk.services.s3.model.GetObjectRequest;
 import software.amazon.awssdk.services.s3.model.PutObjectRequest;
 import software.amazon.awssdk.core.sync.RequestBody;
+import software.amazon.awssdk.core.sync.ResponseTransformer;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
-public class ConsolidatorLambdaHandler implements RequestHandler<S3Event, String> {
+public class LambdaHandler implements RequestHandler<S3Event, String> {
     private final S3Client s3Client = S3Client.builder().build();
     private final ConsolidatorWorker consolidatorWorker = new ConsolidatorWorker();
 
@@ -34,7 +35,7 @@ public class ConsolidatorLambdaHandler implements RequestHandler<S3Event, String
 
             // Get and process the S3 object using the correct ResponseTransformer
             String processedData = s3Client.getObject(getObjectRequest, 
-                software.amazon.awssdk.services.s3.model.ResponseTransformer.toBytes()).asUtf8String();
+                ResponseTransformer.toBytes()).asUtf8String();
 
             // Process the data using ConsolidatorWorker
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();

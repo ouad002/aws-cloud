@@ -95,5 +95,13 @@
       <artifactId>aws-lambda-java-events</artifactId>
       <version>3.11.3</version>
     </dependency>
+    <dependency>
+        <groupId>software.amazon.awssdk</groupId>
+        <artifactId>s3</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>software.amazon.awssdk</groupId>
+        <artifactId>regions</artifactId>
+    </dependency>
   </dependencies>
 </project>

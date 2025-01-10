@@ -1,4 +1,4 @@
-package com.project.worker;
+package com.project.ConsolidatorWorker;
 
 import java.io.*;
 import java.util.*;

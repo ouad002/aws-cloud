@@ -44,11 +44,17 @@ public class UploadClient {
     }
 
     public static void main(String[] args) {
-        // Using your specific values
+        if (args.length != 1) {
+            System.err.println("Usage: java UploadClient <filePath>");
+            System.exit(1);
+        }
+
+        String filePath = args[0];
+
+        // Assuming branchId, region, and bucketName are configured here
         String branchId = "branch001"; // You can modify this as needed
         String region = "us-east-1";  // Your specified region
         String bucketName = "newbucket37920";  // Your specified bucket
-        String filePath = "/mnt/c/Users/user/Downloads/data-20221207.csv";  // Your specified file path
 
         UploadClient client = new UploadClient(branchId, region, bucketName);
         client.uploadFile(Path.of(filePath));
