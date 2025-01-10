@@ -25,6 +25,12 @@ public class LambdaHandler implements RequestHandler<S3Event, String> {
             
             context.getLogger().log("Processing file: " + sourceKey + " from bucket: " + sourceBucket);
 
+            // Skip processing if the file is a summary file
+            if (sourceKey.contains("-summary")) {
+                context.getLogger().log("Skipping summary file: " + sourceKey);
+                return "Skipped summary file: " + sourceKey;
+            }
+
             // Get the file from S3
             GetObjectRequest getObjectRequest = GetObjectRequest.builder()
                 .bucket(sourceBucket)
