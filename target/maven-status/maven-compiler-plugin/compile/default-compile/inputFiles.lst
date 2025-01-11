@@ -1,3 +1,4 @@
+/home/user/aws-project-cloud/src/main/java/com/project/s3/ExportClient.java
 /home/user/aws-project-cloud/src/main/java/com/project/ConsolidatorWorker/LambdaHandler.java
 /home/user/aws-project-cloud/src/main/java/com/project/s3/UploadClient.java
 /home/user/aws-project-cloud/src/main/java/com/project/lambda/LambdaHandler.java
