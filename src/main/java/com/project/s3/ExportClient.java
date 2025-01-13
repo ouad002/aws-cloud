@@ -162,7 +162,7 @@ public class ExportClient {
         try {
             ExportClient client = new ExportClient();
             // Specify the date to filter traffic (for all device combinations)
-            client.downloadAndExport("2025-01-11");
+            client.downloadAndExport("2025-01-13");
             logger.info("Export completed successfully.");
         } catch (Exception e) {
             logger.log(Level.SEVERE, "An error occurred during export", e);
