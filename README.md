@@ -206,7 +206,7 @@ In this project, we use an **AWS EC2 instance** to run the Java application for 
 
 2. **Create a New EC2 Instance**:
    - Click **Launch Instance** and configure as follows:
-     - **Name**: `IoTProcessingInstance`.
+     - **Name**: `project-cloud`.
      - **AMI**: Select **Amazon Linux 2** or any Java-compatible OS.
      - **Instance Type**: Choose `t2.micro` (free-tier eligible) or higher.
      - **Key Pair**: Select an existing key pair or create a new one for SSH access.
@@ -265,3 +265,14 @@ Once the EC2 instance is configured, you can run the `SummarizeWorker` Java appl
 
 ---
 This completes the configuration and running of the `SummarizeWorker` on AWS EC2.
+
+# Using the ExportClient : 
+
+To run the program, use the following command in the project directory:
+```bash
+     java -cp target/aws-project-cloud-1.0-SNAPSHOT.jar com.project.s3.ExportClient
+```
+  - The files are merged and exported into a CSV file named exported_combined_summary.csv in the current directory.
+  - The date used to filter files is set by default in the code (e.g., "2025-01-11"). To change the date, update the main method in the ExportClient.java file.
+
+
