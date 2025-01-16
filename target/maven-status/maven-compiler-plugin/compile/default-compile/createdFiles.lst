@@ -1,9 +1,11 @@
 com/project/lambda/SummarizeWorker$TrafficKey.class
+com/project/ConsolidatorWorker/ConsolidatorWorkerApp.class
 com/project/lambda/SummarizeWorker$TrafficSummary.class
 com/project/lambda/SummarizeWorker.class
 com/project/ConsolidatorWorker/ConsolidatorWorker.class
 com/project/lambda/LambdaHandler.class
 com/project/s3/UploadClient.class
+com/project/lambda/SummarizeWorkerApp.class
 com/project/ConsolidatorWorker/ConsolidatorWorker$TrafficStats.class
 com/project/ConsolidatorWorker/LambdaHandler.class
 com/project/s3/ExportClient.class

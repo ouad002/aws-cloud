@@ -1,6 +1,8 @@
 /home/user/aws-project-cloud/src/main/java/com/project/s3/ExportClient.java
+/home/user/aws-project-cloud/src/main/java/com/project/lambda/SummarizeWorkerApp.java
 /home/user/aws-project-cloud/src/main/java/com/project/ConsolidatorWorker/LambdaHandler.java
 /home/user/aws-project-cloud/src/main/java/com/project/s3/UploadClient.java
+/home/user/aws-project-cloud/src/main/java/com/project/ConsolidatorWorker/ConsolidatorWorkerApp.java
 /home/user/aws-project-cloud/src/main/java/com/project/lambda/LambdaHandler.java
 /home/user/aws-project-cloud/src/main/java/com/project/ConsolidatorWorker/ConsolidatorWorker.java
 /home/user/aws-project-cloud/src/main/java/com/project/lambda/SummarizeWorker.java
