@@ -252,12 +252,9 @@ Once the EC2 instance is configured, you can run the `SummarizeWorker` Java appl
 2. **Execute the SummarizeWorker**:
    - Run the following command:
      ```bash
-     java -cp target/aws-project-cloud-1.0-SNAPSHOT.jar com.project.lambda.SummarizeWorkerApp newbucket37920 branch001/2025-01-10/data-20221204.csv
+     java -cp target/aws-project-cloud-1.0-SNAPSHOT.jar com.project.lambda.SummarizeWorkerApp 
      ```
-     Replace the parameters as follows:
-     - `newbucket37920`: Your S3 bucket name.
-     - `branch001/2025-01-10/`: The folder path in the bucket.
-     - `data-20221204.csv`: The name of the file to process.
+       
 
 3. **Verify the Results**:
    - Check the EC2 console output to ensure successful processing.
